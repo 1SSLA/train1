@@ -25,7 +25,7 @@ public class Train {
         if (vagon.getgruz() <= gruzLimit) {
             Vagons.add(vagon);
         } else {
-            System.out.println("Превышен лимит груза в вагоне!!!");
+            System.out.println("Превышен лимит груза!!!");
         }
     }
 
@@ -36,14 +36,14 @@ public class Train {
         for (Locomotive locomotive : locomotives) {
             totalGruz += locomotive.getgruz();
             if (locomotive.getgruz() > 0 && totalGruz >= gruzLimit) {
-                System.out.println("Превышен лимит груза на поезде!!!");
+                System.out.println("Превышен лимит!!!");
             }
         }
 
         for (Vagon vagon : Vagons) {
             totalGruz += vagon.getgruz();
             if (vagon.getgruz() > gruzLimit) {
-                System.out.println("Превышен лимит груза в вагоне!!!");
+                System.out.println("Превышен лимит!!!");
             }
         }
         return totalGruz;
